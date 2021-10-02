@@ -43,6 +43,8 @@ class _HomePageState extends State<HomePage> {
   loadmodel() async {
     await Tflite.loadModel(
         model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
+  
+    
   }
 
   @override
@@ -74,6 +76,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
+    //Your media queries are unable to set height and width in this project the implementation is incorrect
     return Scaffold(
       appBar: AppBar(
         title: Text(
